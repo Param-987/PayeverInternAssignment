@@ -45,6 +45,20 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Api Endpoints
+
+- **Post /api/user**
+Will add the data to MongoDb, and will send a welcome email mentioned in user body.
+
+- **GET /api/user/{userId}**
+Will fetch a particular user data from https://reqres.in/api/users/{userId} in json format.
+
+- **GET /api/user/{userId}/avatar**
+Will access the avatar url from data of user fetched from https://reqres.in/api/users/{userId} and the avatar image will get saved in folder avatar/id_hash.jpg , where id is userId and hash is a random string of length 10.Simultaneously Id, avatar image in base64 encoded string and hash values are stored in db.
+
+- **DELETE /api/user/{userId}/avatar**
+Will delete the avatar plain image file and corresponding avatar db entry.
+
 ## Test
 
 ```bash
